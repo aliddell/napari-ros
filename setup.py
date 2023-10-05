@@ -4,13 +4,13 @@ package_name = "napari_ros"
 
 setup(
     name=package_name,
-    version="0.1.0",
+    version="0.0.1",
     packages=[package_name],
     data_files=[
         ("share/ament_index/resource_index/packages", ["resource/" + package_name]),
         ("share/" + package_name, ["package.xml"]),
     ],
-    install_requires=["setuptools", "napari"],
+    install_requires=["setuptools", "wheel", "napari"],
     zip_safe=True,
     maintainer="Alan Liddell",
     maintainer_email="alan.c.liddell@gmail.com",
@@ -22,5 +22,6 @@ setup(
             "viewer = napari_ros.viewer:main",
             "stream_viewer = napari_ros.stream_viewer:main",
         ],
+        "napari.manifest": ["napari-ros = napari_ros:napari.yaml"],
     },
 )
