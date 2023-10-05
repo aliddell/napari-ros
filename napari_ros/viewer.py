@@ -2,7 +2,6 @@ import rclpy
 from rclpy.node import Node
 
 import napari
-from skimage.data import cells3d
 
 
 class NapariViewer(Node):
